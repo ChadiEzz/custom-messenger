@@ -1,0 +1,19 @@
+.myBubble {
+    display: table;
+    margin-left: 8em;
+    float: right;
+}
+
+.myBubble ion-card-content {
+    color: black;
+}
+
+.yourBubble {
+    display: table;
+    margin-right: 8em;
+    background-color: white;
+}
+
+.yourBubble ion-card-content {
+    color: black;
+}
