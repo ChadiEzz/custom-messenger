@@ -1,0 +1,13 @@
+.myChatInput {
+    max-height: 5em;
+    /* ion-textarea css */
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-end: 5em;
+    --placeholder-color: black;
+    --color: black;
+}
+
+.myChatInput .native-textarea {
+    max-height: 5em;
+}

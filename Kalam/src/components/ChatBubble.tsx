@@ -10,16 +10,16 @@ interface ContainerProps {
 const ChatBubble: React.FC<ContainerProps> = ({ content, who }) => {
   return (
     who === "me" ?
-      <IonCard className="myBubble tail-bottom-right" color="success">
-          <IonCardContent>
-              {content}
-          </IonCardContent>
+      <IonCard className="myBubble" color="success">
+        <IonCardContent>
+          {content}
+        </IonCardContent>
       </IonCard>
       :
       <IonCard className="yourBubble">
-          <IonCardContent>
-              {content}
-          </IonCardContent>
+        <IonCardContent>
+          {content}
+        </IonCardContent>
       </IonCard>
   );
 };

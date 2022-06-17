@@ -1,24 +1,36 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { useEffect } from "react";
+import { IonContent, IonFooter, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ChatBubble from '../components/ChatBubble';
-import './Chatroom.css';
+import ChatInput from '../components/ChatInput';
+import { hideTabBar } from '../hooks/hideTabBar';
+import { newLineText } from '../hooks/textParcing';
+import './ChatRoom.css';
 
-const Chatroom: React.FC = () => {
-    var chatroomId = window.location.pathname.split('/')[2];
+const ChatRoom: React.FC = () => {
+    var chatRoomId = window.location.pathname.split('/')[2];
+    var textInput = ""
+
+    useEffect(() => {
+        hideTabBar();
+    }, []);
 
     return (
-        <IonPage>
+        <IonPage className='ChatRoom'>
             <IonHeader>
                 <IonToolbar>
-                    <IonTitle>{"Chatroom ID " + chatroomId}</IonTitle>
+                    <IonTitle>{"ChatRoom ID " + chatRoomId}</IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonContent>
                 <ChatBubble content={"J'adore les poneys"} who={"you"} />
                 <ChatBubble content={"Moi aussi !"} who={"me"} />
             </IonContent>
+            <IonFooter className='ChatRoomFooter'>
+                <ChatInput content={textInput} />
+            </IonFooter>
         </IonPage>
     );
 };
 
-export default Chatroom;
+export default ChatRoom;
