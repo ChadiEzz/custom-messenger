@@ -1,7 +1,12 @@
+.myBubbleContainer {
+    width: 100%;
+}
+
 .myBubble {
-    display: table;
-    margin-left: 8em;
     float: right;
+    margin-left: 20%;
+    max-width: 80%;
+    display: table-cell;
 }
 
 .myBubble ion-card-content {
