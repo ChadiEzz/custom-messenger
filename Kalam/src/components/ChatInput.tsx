@@ -1,4 +1,4 @@
-import React, { MutableRefObject } from 'react';
+import React from 'react';
 import './ChatInput.css';
 import { IonGrid, IonTextarea, IonIcon, IonRow, IonCol } from '@ionic/react';
 import { sendOutline } from 'ionicons/icons';
@@ -6,16 +6,15 @@ import { sendOutline } from 'ionicons/icons';
 interface ContainerProps {
     textList: string[]
     changeTextList: (textInput: string[]) => void;
-    contentRef: MutableRefObject<HTMLIonContentElement | null>;
 }
 
-const ChatInput: React.FC<ContainerProps> = ({ textList, changeTextList, contentRef }) => {
+const ChatInput: React.FC<ContainerProps> = ({ textList, changeTextList }) => {
     var inputContent = "";
 
     return (
         <IonGrid>
             <IonRow>
-                <IonCol>
+                <IonCol className="inputCol">
                     <IonTextarea
                         id="ChatInput"
                         className="myChatInput"
@@ -28,7 +27,7 @@ const ChatInput: React.FC<ContainerProps> = ({ textList, changeTextList, content
                             }
                         }} />
                 </IonCol>
-                <IonCol>
+                <IonCol className="buttonCol">
                     <IonIcon icon={sendOutline} onClick={() => {
                         changeTextList([...textList, inputContent]);
                     }} />

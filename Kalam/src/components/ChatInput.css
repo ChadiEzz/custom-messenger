@@ -3,11 +3,22 @@
     /* ion-textarea css */
     --padding-top: 0px;
     --padding-bottom: 0px;
-    --padding-end: 5em;
+    --padding-end: 5%;
     --placeholder-color: black;
     --color: black;
 }
 
-.myChatInput .native-textarea {
-    max-height: 5em;
+.inputCol {
+    max-height: 100%;
+    max-width: 80%;
+    overflow-y: scroll;
 }
+
+.buttonCol {
+    max-width: 20%;
+    max-height: 100%;
+}
+
+/*.myChatInput .native-textarea {
+    max-height: 100%;
+}*/

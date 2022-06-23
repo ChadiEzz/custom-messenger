@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { IonAvatar, IonList, IonItem, IonLabel, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonRippleEffect } from '@ionic/react';
 //import ExploreContainer from '../components/ExploreContainer';
+import { showTabBar } from '../hooks/tabBarManager';
 import './Tab1.css';
 
 const accessChatroom = () => {
@@ -9,6 +10,11 @@ const accessChatroom = () => {
 }
 
 const Tab1: React.FC = () => {
+
+  useEffect(() => {
+    showTabBar();
+  }, []);
+
   return (
     <IonPage>
       <IonHeader>

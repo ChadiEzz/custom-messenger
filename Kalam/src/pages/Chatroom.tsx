@@ -1,9 +1,9 @@
 import React, { useCallback, useRef } from 'react';
 import { useEffect, useState } from "react";
-import { IonContent, IonFooter, IonGrid, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonBackButton, IonButtons, IonContent, IonFooter, IonGrid, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ChatBubble from '../components/ChatBubble';
 import ChatInput from '../components/ChatInput';
-import { hideTabBar } from '../hooks/hideTabBar';
+import { hideTabBar } from '../hooks/tabBarManager';
 import './ChatRoom.css';
 
 const ChatRoom: React.FC = () => {
@@ -26,6 +26,9 @@ const ChatRoom: React.FC = () => {
         <IonPage id="IonPage" className='ChatRoom'>
             <IonHeader>
                 <IonToolbar>
+                    <IonButtons slot="start">
+                        <IonBackButton defaultHref="/tab1" />
+                    </IonButtons>
                     <IonTitle>{"ChatRoom ID " + chatRoomId}</IonTitle>
                 </IonToolbar>
             </IonHeader>
@@ -42,7 +45,7 @@ const ChatRoom: React.FC = () => {
                 </IonGrid>
             </IonContent>
             <IonFooter className='ChatRoomFooter'>
-                <ChatInput textList={textList} changeTextList={setTextList} contentRef={contentRef} />
+                <ChatInput textList={textList} changeTextList={setTextList} />
             </IonFooter>
         </IonPage>
     );
