@@ -8,11 +8,17 @@ import './ChatRoom.css';
 
 const ChatRoom: React.FC = () => {
     var chatRoomId = window.location.pathname.split('/')[2];
-    const [textList, setTextList] = useState(['']);
-    const contentRef = useRef<HTMLIonContentElement | null>(null);
+    const [textList, setTextList] = useState([
+        ["you", "Coucou !"],
+        ["me", "Hey ! Tu vas bien ?"],
+        ["you", "Super merci et toi ? :)"],
+        ["me", ""]
+    ]);
+
+    var contentRef = useRef<HTMLIonContentElement | null>(null);
 
     const scrollToBottom = useCallback(() => {
-        contentRef.current && contentRef.current.scrollToBottom(0);
+        contentRef.current && contentRef.current.scrollToBottom(400);
     }, []);
 
     useEffect(() => {
@@ -20,6 +26,7 @@ const ChatRoom: React.FC = () => {
     }, []);
 
     useEffect(() => {
+        setTimeout(scrollToBottom, 50);
     });
 
     return (
@@ -35,10 +42,9 @@ const ChatRoom: React.FC = () => {
             <IonContent ref={contentRef} scrollEvents={true}>
                 <IonGrid id="IonGrid" className="ChatGrid">
                     {
-                        textList.map(entry => {
-                            if (entry !== "") {
-                                return <ChatBubble content={entry} who={"me"} scrollToBottom={scrollToBottom}
-                                />;
+                        textList.map((content) => {
+                            if (content.length > 0 && content[1].length > 0) {
+                                return <ChatBubble who={content[0]} content={content[1]}/>;
                             } else return null;
                         })
                     }

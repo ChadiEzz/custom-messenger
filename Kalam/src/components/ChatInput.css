@@ -15,8 +15,8 @@
 }
 
 .buttonCol {
-    max-width: 20%;
     max-height: 100%;
+    max-width: 20%;
 }
 
 /*.myChatInput .native-textarea {

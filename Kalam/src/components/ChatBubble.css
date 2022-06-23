@@ -14,9 +14,16 @@
     color: black;
 }
 
+.yourBubbleContainer {
+    width: 100%;
+}
+
 .yourBubble {
-    display: table;
-    margin-right: 8em;
+    float: left;
+    margin-right: 20%;
+    max-width: 80%;
+    display: table-cell;
+    white-space: pre-wrap;
     background-color: white;
 }
 

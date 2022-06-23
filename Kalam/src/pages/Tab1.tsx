@@ -4,11 +4,6 @@ import { IonAvatar, IonList, IonItem, IonLabel, IonContent, IonHeader, IonPage, 
 import { showTabBar } from '../hooks/tabBarManager';
 import './Tab1.css';
 
-const accessChatroom = () => {
-  console.log("origin  : ", window.location.origin);
-  window.location.href = window.location.origin + "/chat/1442323";
-}
-
 const Tab1: React.FC = () => {
 
   useEffect(() => {
@@ -24,7 +19,7 @@ const Tab1: React.FC = () => {
       </IonHeader>
       <IonContent>
         <IonList>
-          <IonItem className="ion-activatable ripple-parent" onClick={() => accessChatroom()}>
+          <IonItem className="ion-activatable ripple-parent" href="/chat/1442323">
             <IonAvatar>
               <img alt="" src="./elisa.jpeg" />
             </IonAvatar>
@@ -34,7 +29,7 @@ const Tab1: React.FC = () => {
             </IonLabel>
             <IonRippleEffect></IonRippleEffect>
           </IonItem>
-          <IonItem className="ion-activatable ripple-parent" onClick={() => accessChatroom()}>
+          <IonItem className="ion-activatable ripple-parent" href="/chat/1442323">
             <IonAvatar>
               <img alt="" src="./elisa.jpeg" />
             </IonAvatar>
@@ -44,7 +39,7 @@ const Tab1: React.FC = () => {
             </IonLabel>
             <IonRippleEffect></IonRippleEffect>
           </IonItem>
-          <IonItem className="ion-activatable ripple-parent" onClick={() => accessChatroom()}>
+          <IonItem className="ion-activatable ripple-parent" href="/chat/1442323">
             <IonAvatar>
               <img alt="" src="./elisa.jpeg" />
             </IonAvatar>

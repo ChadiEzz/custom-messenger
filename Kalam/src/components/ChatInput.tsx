@@ -4,8 +4,8 @@ import { IonGrid, IonTextarea, IonIcon, IonRow, IonCol } from '@ionic/react';
 import { sendOutline } from 'ionicons/icons';
 
 interface ContainerProps {
-    textList: string[]
-    changeTextList: (textInput: string[]) => void;
+    textList: string[][];
+    changeTextList: (textInput: string[][]) => void;
 }
 
 const ChatInput: React.FC<ContainerProps> = ({ textList, changeTextList }) => {
@@ -29,7 +29,7 @@ const ChatInput: React.FC<ContainerProps> = ({ textList, changeTextList }) => {
                 </IonCol>
                 <IonCol className="buttonCol">
                     <IonIcon icon={sendOutline} onClick={() => {
-                        changeTextList([...textList, inputContent]);
+                        changeTextList([...textList, ["me", inputContent]]);
                     }} />
                 </IonCol>
             </IonRow>
