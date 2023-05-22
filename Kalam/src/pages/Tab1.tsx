@@ -21,30 +21,30 @@ const Tab1: React.FC = () => {
         <IonList>
           <IonItem className="ion-activatable ripple-parent" href="/chat/1442323">
             <IonAvatar>
-              <img alt="" src="./elisa.jpeg" />
+              <img alt="" src="./hero.jpg" />
             </IonAvatar>
             <IonLabel>
               <h2>Elisa</h2>
-              <p>omg born to be alive j'y crois pas</p>
+              <p>Joyeux anniversaire !</p>
             </IonLabel>
             <IonRippleEffect></IonRippleEffect>
           </IonItem>
           <IonItem className="ion-activatable ripple-parent" href="/chat/1442323">
             <IonAvatar>
-              <img alt="" src="./elisa.jpeg" />
+              <img alt="" src="./hero.jpg" />
             </IonAvatar>
             <IonLabel>
               <h2>Maman</h2>
-              <p>Elisa range ta chambre sinon...</p>
+              <p>Range ta chambre...</p>
             </IonLabel>
             <IonRippleEffect></IonRippleEffect>
           </IonItem>
           <IonItem className="ion-activatable ripple-parent" href="/chat/1442323">
             <IonAvatar>
-              <img alt="" src="./elisa.jpeg" />
+              <img alt="" src="./hero.jpg" />
             </IonAvatar>
             <IonLabel>
-              <h2>Papa</h2>
+              <h2>David</h2>
               <p>J'ai reservé tes billets pour...</p>
             </IonLabel>
             <IonRippleEffect></IonRippleEffect>

@@ -4,7 +4,7 @@ import { IonBackButton, IonButtons, IonContent, IonFooter, IonGrid, IonHeader, I
 import ChatBubble from '../components/ChatBubble';
 import ChatInput from '../components/ChatInput';
 import { hideTabBar } from '../hooks/tabBarManager';
-import './ChatRoom.css';
+import './Chatroom.css';
 
 const ChatRoom: React.FC = () => {
     var chatRoomId = window.location.pathname.split('/')[2];
